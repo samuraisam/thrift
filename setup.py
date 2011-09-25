@@ -25,13 +25,13 @@ except:
     from distutils.core import setup, Extension
 import sys
 
-include_dirs = []
-if sys.platform == 'win32':
-    include_dirs.append('compat/win32')
-fastbinarymod = Extension('thrift.protocol.fastbinary',
-                    sources = ['src/protocol/fastbinary.c'],
-                    include_dirs = include_dirs,
-                )
+#include_dirs = []
+#if sys.platform == 'win32':
+#    include_dirs.append('compat/win32')
+#fastbinarymod = Extension('thrift.protocol.fastbinary',
+#                    sources = ['src/protocol/fastbinary.c'],
+#                    include_dirs = include_dirs,
+#                )
 
 setup(name = 'thrift',
     version = '0.8.0-dev',
@@ -47,7 +47,7 @@ setup(name = 'thrift',
         'thrift.server',
     ],
     package_dir = {'thrift' : 'src'},
-    ext_modules = [fastbinarymod],
+#    ext_modules = [fastbinarymod],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
